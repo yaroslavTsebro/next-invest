@@ -1,0 +1,22 @@
+@import "./nulling.scss";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto&display=swap');
+
+
+$font-grey: #333;
+$font-white: #FFF;
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: $font-grey;
+  font-family: Josefin Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+
+[class*="__container"] {
+  width: 1200px;
+  margin: 0px auto;
+  padding: 0 15px;
+}
