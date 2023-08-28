@@ -2,6 +2,30 @@ import { useState } from "react";
 import { useWindowWidthAndHeight } from "../../hooks/useWindowWidthAndHeight";
 import { CSSTransition } from "react-transition-group";
 import "./Header.scss";
+import { DropDownList } from "../DropDownList/DropDownList";
+
+const howItWorksOptions = [
+  {
+    href: "#d",
+    text: "How to start",
+  },
+  {
+    href: "#3",
+    text: "Get money",
+  },
+];
+
+const investmentOptions = [
+  {
+    href: "#d",
+    text: "How much does it cost?",
+  },
+  {
+    href: "#3",
+    text: "How to buy?",
+  },
+];
+
 
 export function Header() {
   const [width, height] = useWindowWidthAndHeight();
@@ -27,14 +51,14 @@ export function Header() {
           >
             <ul className="menu__list">
               <li className="menu__item">
-                <a href="#" className="menu__link">
-                  Investment Opportunities
-                </a>
+                <DropDownList options={howItWorksOptions}>
+                  <p className="menu__link">Investment Opportunities</p>
+                </DropDownList>
               </li>
               <li className="menu__item">
-                <a href="#" className="menu__link">
-                  How it works
-                </a>
+                <DropDownList options={howItWorksOptions}>
+                  <p className="menu__link">How it works</p>
+                </DropDownList>
               </li>
               <li className="menu__item">
                 <a href="#" className="menu__link">
@@ -45,10 +69,10 @@ export function Header() {
           </CSSTransition>
         </nav>
         {isSmall && (
-            <button onClick={toggleNav} className="header__burger">
-              🍔
-            </button>
-          )}
+          <button onClick={toggleNav} className="header__burger">
+            🍔
+          </button>
+        )}
         <div className="header__actions">
           <button className="header__login button button_purple">Login</button>
           <button className="header__register button">Register</button>
