@@ -1,30 +1,10 @@
 import { useState } from "react";
-import { useWindowWidthAndHeight } from "../../hooks/useWindowWidthAndHeight";
+import { useWindowWidthAndHeight } from "../../../hooks/useWindowWidthAndHeight";
 import { CSSTransition } from "react-transition-group";
 import "./Header.scss";
-import { DropDownList } from "../DropDownList/DropDownList";
+import { DropDownList } from "../../common/DropDownList/DropDownList";
+import { DropDownItem } from "../../common/DropDownList/DropDownItem";
 
-const howItWorksOptions = [
-  {
-    href: "#d",
-    text: "How to start",
-  },
-  {
-    href: "#3",
-    text: "Get money",
-  },
-];
-
-const investmentOptions = [
-  {
-    href: "#d",
-    text: "How much does it cost?",
-  },
-  {
-    href: "#3",
-    text: "How to buy?",
-  },
-];
 
 
 export function Header() {
@@ -51,13 +31,15 @@ export function Header() {
           >
             <ul className="menu__list">
               <li className="menu__item">
-                <DropDownList options={howItWorksOptions}>
-                  <p className="menu__link">Investment Opportunities</p>
+                <DropDownList title={<div className="menu__link">Investment Opportunities</div>}>
+                  <DropDownItem href="#1" text='How much does it cost?'/>
+                  <DropDownItem href="#2" text='How to buy?'/>
                 </DropDownList>
               </li>
               <li className="menu__item">
-                <DropDownList options={howItWorksOptions}>
-                  <p className="menu__link">How it works</p>
+                <DropDownList title={<div className="menu__link">How it works</div>}>
+                  <DropDownItem href="#3" text='How to start'/>
+                  <DropDownItem href="#4" text='Get money'/>
                 </DropDownList>
               </li>
               <li className="menu__item">
