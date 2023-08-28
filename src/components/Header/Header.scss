@@ -6,8 +6,10 @@
 
 .header__container {
   min-height: 90px;
-  display: flex;
+  display: grid;
   align-items: center;
+  grid-template-areas: "logo nav actions";
+  grid-template-columns: 200px auto min-content;
 }
 
 .header__logo {
@@ -20,7 +22,7 @@
 }
 
 .header__menu {
-  flex: 1 1 auto;
+  grid-area: nav;
   padding-right: 24px;
 }
 
@@ -28,11 +30,12 @@
 
 .menu__list {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
+  width: auto;
 }
 
 .menu__item {
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-right: 16px;
   }
 }
@@ -45,7 +48,10 @@
 }
 
 .header__actions {
-  flex: 0 0 auto;
+  grid-area: actions;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 }
 
 .header__login {}
@@ -65,8 +71,53 @@
 .button_purple {
   background-color: #7B61FF;
   color: #FFF;
+}
 
-  &:not(:last-child) {
-    margin-right: 16px;
+.header__burger {
+  grid-area: burger;
+  display: inline-block;
+  align-items: center;
+  font-size: 40px;
+  background-color: #555555;
+}
+
+@media (max-width: 1000px) {
+  .header__container {
+    row-gap: 10px;
+    grid-template-areas: "logo burger" "nav nav" "actions actions";
+  }
+
+  .header__burger {
+    display: flex;
+    justify-content: end;
+  }
+
+  .menu__list {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: none;
+    grid-row-gap: 20px;
+
+    padding: 30px 0 30px;
+  }
+
+  .header__actions {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .menu__link {
+    font-size: 20px;
+  }
+
+  .menu__list {
+    border: 2px dashed #fff;
+    border-radius: 30px;
+  }
+
+  .menu {
+    padding-right: 0px;
+    padding-bottom: 10px;
   }
 }

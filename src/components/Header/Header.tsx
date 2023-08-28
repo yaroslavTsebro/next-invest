@@ -43,12 +43,12 @@ export function Header() {
               </li>
             </ul>
           </CSSTransition>
-          {isSmall && (
+        </nav>
+        {isSmall && (
             <button onClick={toggleNav} className="header__burger">
               🍔
             </button>
           )}
-        </nav>
         <div className="header__actions">
           <button className="header__login button button_purple">Login</button>
           <button className="header__register button">Register</button>
