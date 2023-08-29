@@ -1,0 +1,19 @@
+.offers__text {
+  max-width: 770px;
+}
+
+.offers {
+  padding: 160px 0px;
+}
+
+.offers__container {}
+
+.offers__body {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+.offers__view-all {
+  text-align: center;
+}

@@ -77,6 +77,12 @@
   color: #FFF;
 }
 
+.button_tansparent-blue {
+  border: 1px solid #336EE1;
+  color: transparent;
+  color: #336EE1;
+}
+
 .header__burger {
   grid-area: burger;
   display: inline-block;
