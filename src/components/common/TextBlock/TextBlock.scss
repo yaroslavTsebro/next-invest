@@ -1,0 +1,46 @@
+.text-block {}
+
+.text-block__icon {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.text-block_center{
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+.text-block__title {
+  color: #333;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.text-block__text {
+  color: #999;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.text-block__button {
+  padding: 24px 40px;
+  background-color: #7B61FF;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
