@@ -1,0 +1,32 @@
+.paid-body {
+  max-width: 570px;
+}
+.paid{
+  background-color: #ECF4FD;
+}
+
+.paid{
+  padding: 160px 0;
+}
+
+.paid-body__icon {
+  
+}
+
+.paid__container{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  @media (max-width: 991.98px) {
+    flex-wrap: wrap;
+  }
+}
+
+.paid__chart{
+  flex: 1 1 100%;
+  // width: fit-content;
+}
+
+.paid-body{
+  flex: 1 1 100%;
+}
