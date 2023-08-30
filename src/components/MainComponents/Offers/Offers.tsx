@@ -1,4 +1,5 @@
 import { Card, Offer, SecurityType } from "../../common/Card/Card";
+import { Decor } from "../../common/Decor/Decor";
 import {
   TextBlock,
   TextBlockText,
@@ -18,7 +19,7 @@ export function Offers() {
             number of industry categories.
           </TextBlockText>
         </TextBlock>
-        <CardList/>
+        <CardList />
         <div className="offers__view-all">
           <button className="button button_tansparent-blue">
             View All Projects
