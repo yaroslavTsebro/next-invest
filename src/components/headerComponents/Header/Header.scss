@@ -3,8 +3,7 @@
   top: 0;
   width: 100vw;
   z-index: 100;
-  background-color: #555555;
-  opacity: 0.90;
+  background-color: rgba(85, 85, 85, 0.9);
 }
 
 .header__container {
@@ -17,7 +16,6 @@
 
 .header__logo {
   color: #fff;
-  opacity: 1;
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;

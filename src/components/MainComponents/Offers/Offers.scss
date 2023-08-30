@@ -1,5 +1,7 @@
 .offers__text {
   max-width: 770px;
+
+  margin-bottom: 60px;
 }
 
 .offers {
@@ -8,11 +10,7 @@
 
 .offers__container {}
 
-.offers__body {
-  &:not(:last-child) {
-    margin-bottom: 60px;
-  }
-}
+
 
 .offers__view-all {
   text-align: center;
