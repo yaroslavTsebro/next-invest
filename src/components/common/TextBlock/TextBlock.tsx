@@ -50,5 +50,5 @@ export function TextBlockText(props: TextBlockText) {
 export function TextBlockButton(props: TextBlockText) {
   const classes =
     "text-block__button " + (props.className ? props.className : "");
-  return <div className={classes}>{props.children}</div>;
+  return <button className={classes}>{props.children}</button>;
 }

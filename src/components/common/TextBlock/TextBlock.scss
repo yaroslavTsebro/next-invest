@@ -35,6 +35,10 @@
   }
 }
 
+.text-block__text ~ .text-block__button{
+  margin-top: 40px;
+}
+
 .text-block__button {
   padding: 24px 40px;
   background-color: #7B61FF;
